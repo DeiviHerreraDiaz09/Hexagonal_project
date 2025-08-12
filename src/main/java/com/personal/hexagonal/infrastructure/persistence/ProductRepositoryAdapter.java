@@ -18,7 +18,6 @@ public class ProductRepositoryAdapter implements ProductRepository {
     public Product save(Product product) {
         ProductEntity entity = ProductEntity.fromDomain(product);
         ProductEntity savedEntity = repositoryJpa.save(entity);
-        System.out.println(savedEntity);
         return savedEntity.toDomain();
     }
 
